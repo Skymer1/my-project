@@ -3,7 +3,7 @@ FROM python:3.10
 RUN pip install flask
 
 WORKDIR /flaskapp
-ADD app.py /flaskapp
+ADD app.py . 
 
 ENV FLASK_ENV=development
 

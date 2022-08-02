@@ -16,10 +16,10 @@ spec:
         app: myapp
     spec:
       imagePullSecrets:
-      - name: myapp-secret
+      - name: {{ .Release.Name }}-secret
       containers:
       - name: myapp
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         imagePullPolicy: Always
         ports:
         - containerPort: 8081

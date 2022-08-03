@@ -16,7 +16,7 @@ spec:
         app: myapp
     spec:
       imagePullSecrets:
-      - name: {{ .Release.Name }}-secret
+      - name: myapp-secret
       containers:
       - name: myapp
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}

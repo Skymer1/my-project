@@ -14,8 +14,8 @@ pipeline {
 
             steps {
                 sh "aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin 233896446314.dkr.ecr.eu-central-1.amazonaws.com"
-                sh "docker tag skymer:$BUILD_NUMBER 233896446314.dkr.ecr.eu-central-1.amazonaws.com/myproject:flask$BUILD_NUMBER"
-                sh "docker push 233896446314.dkr.ecr.eu-central-1.amazonaws.com/myproject:flask$BUILD_NUMBER"
+                sh "docker tag skymer:$BUILD_NUMBER 233896446314.dkr.ecr.eu-central-1.amazonaws.com/myproject:$BUILD_NUMBER"
+                sh "docker push 233896446314.dkr.ecr.eu-central-1.amazonaws.com/myproject:$BUILD_NUMBER"
             }
         }
         

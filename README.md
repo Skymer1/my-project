@@ -1,1 +1,1 @@
-This is my ongoing project
+This is my project
